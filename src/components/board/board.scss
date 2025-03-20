@@ -1,0 +1,39 @@
+@use "../../styles/extends";
+
+.game-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 850px;
+  margin: auto;
+
+  .tile {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 8px;
+    background: extends.$tile-bg;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: extends.$tile-color
+  }
+
+  [data-revealed=true] {
+    background: white;
+    transform: scale(1.1);
+  }
+
+  .bg-level-image {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+}

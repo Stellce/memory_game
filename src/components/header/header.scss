@@ -1,0 +1,36 @@
+@use "../../styles/extends";
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+
+  .settings {
+    @extend %common-dialog;
+  }
+
+  object {
+    width: 56px;
+    border-radius: 8px;
+  }
+  .stats {
+    order: 1;
+    p {
+      text-shadow: 0 0 20px extends.$bg-color;
+    }
+  }
+  .settings-btn {
+    order: 2;
+  }
+}
+
+@media (max-width: 450px) {
+  object {
+    order: 2;
+  }
+  .stats {
+    width: 100%;
+  }
+}

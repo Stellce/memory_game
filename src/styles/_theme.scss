@@ -1,0 +1,26 @@
+:root {
+  --color: rgba(255, 255, 255, 0.87);
+  --background-color: #242424;
+  --bg-darker: #1a1a1a;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color: #213547;
+    --background-color: #f9f9f9;
+    --bg-darker: #f9f9f9;
+  }
+}
+
+
+$bg-color: var(--background-color);
+$color: var(--color);
+
+$bg-darker: var(--bg-darker);
+
+$primary: #b864ff;
+$primary-darker: #c553f2;
+$primary-lighter: #c774ff;
+
+$tile-color: #242424;
+$tile-bg: linear-gradient(135deg, #ff9a9e, #fad0c4);

@@ -1,0 +1,14 @@
+@use "../../styles/extends";
+
+.save-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 50vh;
+  overflow: auto;
+}
+.save {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: extends.$bg-darker;
+}
