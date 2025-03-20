@@ -25,8 +25,8 @@ const Header = () => {
 		<header className="app-header">
 			{ tiles.length ?
 				<>
-          <object type="image/svg+xml" data="MG.svg" className="logo">Logo</object>
-          <Stats/>
+					<img src="/logo.jfif" alt="" className="logo"/>
+					<Stats/>
           <button className="settings-btn" onClick={() => setOpenSettings(!openSettings)}>⚙️</button>
 					{ openSettings ?
 						<Modal onClose={() => setOpenSettings(false)}>

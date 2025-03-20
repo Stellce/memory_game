@@ -8,7 +8,27 @@
   overflow: auto;
 }
 .save {
+  display: flex;
   padding: 1rem;
   border-radius: 8px;
   background-color: extends.$bg-darker;
+  gap: 1rem;
+
+  img {
+    width: max(50px, 30%);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    .align-end {
+      text-align: end;
+    }
+  }
 }
