@@ -17,7 +17,7 @@ const Board = () => {
 	const level = levels.find(l => l.name === levelName)!;
 
 	return (
-		<div className="game-board">
+		<div className="game-board" data-level={level.name}>
 			{tiles.map((tile) => {
 				const revealed = revealedTiles.includes(tile.id) || matchedPairs.includes(tile.id);
 				return (

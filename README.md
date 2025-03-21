@@ -3,7 +3,7 @@
 A fun and interactive memory card matching game built with React, Vite, and Zustand for state management. The game challenges players to find matching pairs while tracking their attempts and time.
 
 ## 🚀 Features
-- **Multiple difficulty levels** with varying tile numbers 12 | 24 | 36.
+- **Multiple difficulty levels** with varying tile numbers 6 | 12 | 18.
 - **Live statistics**: number of attempts, elapsed time.
 - **History**: stores past game results in localStorage.
 - **Random tile sets from 72 emojis**.
