@@ -19,7 +19,7 @@
     background: extends.$tile-bg;
     cursor: pointer;
     transition: transform 0.3s ease;
-    color: extends.$tile-color
+    color: extends.$tile-color;
   }
 
   [data-revealed=true] {

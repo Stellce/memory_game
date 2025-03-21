@@ -21,7 +21,7 @@ const MainMenu = () => {
 	return (
 		<>
 			<div className="main-menu">
-				{/*<img className="bg-image" src="/background-main.jfif" alt=""/>*/}
+				<img className="bg-image" src="/background-main.jfif" alt=""/>
 				<div className="options">
 					<button onClick={onPlay}>Play</button>
 					<button onClick={onHistory}>History</button>
