@@ -1,7 +1,12 @@
 @use "../../styles/extends" as *;
 
+#root {
+  background-image: url(/background-main.jfif);
+}
+
 .main-menu {
-  @extend %panel;
+  display: flex;
+  align-items: center;
   margin-top: -5rem;
   flex-direction: column;
 
