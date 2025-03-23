@@ -33,12 +33,13 @@ const LevelSelector = (props: Props) => {
 	const getRandomEmojis = (n: number) => {
 		const startCode = 127789;
 		const endCode = 127861;
-		const emojiCodes = Array.from({length: endCode - startCode - 1}, (_, i) => startCode + i);
+		let emojiCodes = Array.from({length: endCode - startCode - 1}, (_, i) => startCode + i);
 		const emojis = [];
 
 		for (let i = 1; i <= n; i++) {
 			const randomIndex = Math.floor(Math.random() * emojiCodes.length);
 			const randomCode = emojiCodes[randomIndex];
+			emojiCodes = emojiCodes.filter(ec => ec !== randomCode);
 			const emoji = String.fromCodePoint(Number("0x" + (randomCode).toString(16)));
 			emojis.push(emoji);
 		}
