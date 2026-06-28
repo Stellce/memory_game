@@ -1,43 +1,64 @@
 # Memory Game
 
-A fun and interactive memory card matching game built with React, Vite, and Zustand for state management. The game challenges players to find matching pairs while tracking their attempts and time.
+A responsive memory card game built with **React**, **TypeScript**, **Vite**, **Zustand** and **SCSS**.
 
-## 🚀 Features
-- **Multiple difficulty levels** with varying tile numbers 6 | 12 | 18.
-- **Live statistics**: number of attempts, elapsed time.
-- **History**: stores past game results in localStorage.
-- **Random tile sets from 72 emojis**.
-- **Responsive design**.
+The app lets the player choose a difficulty level, match hidden cards, track attempts and time, and save completed game results in local history.
 
-## 🛠️ Technologies Used
-- **React, Vite**
-- **TypeScript**
-- **Zustand**
-- **SCSS**
+**Live demo:** https://memory-game-peach-xi.vercel.app/
 
-## 📦 Installation & Setup
+## Preview
 
-1. Clone the repository:
-   ```bash
-   git clone https://gitlab.com/stellce/memory_game.git
-   cd memory-game
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open your browser and navigate to `http://localhost:5173`.
+![Game board](docs/screenshots/game-board.jpeg)
 
-## 🎮 How to Play
-1. Select a difficulty level.
-2. Click on two tiles to reveal their images.
-3. If they match, they stay revealed; otherwise, they flip back.
-4. Try to match all pairs in the fewest attempts possible!
-5. View your game history and improve your memory skills!
+| Start screen                                     | Result modal                                             | History                                               |
+| ------------------------------------------------ | -------------------------------------------------------- | ----------------------------------------------------- |
+| ![Start screen](docs/screenshots/home-menu.jpeg) | ![Result modal](docs/screenshots/game-result-modal.jpeg) | ![History modal](docs/screenshots/history-modal.jpeg) |
 
-## 🔗 Live Demo
-[Live Demo](https://memory-game-peach-xi.vercel.app)
+## Features
+
+* Difficulty selection with different board sizes.
+* Randomized card layout for every new game.
+* Attempts counter and elapsed time tracking.
+* Match detection and completed-pair handling.
+* End-game summary modal.
+* Game history saved in `localStorage`.
+* Responsive UI with custom SCSS styling.
+
+## Tech Stack
+
+* React
+* TypeScript
+* Vite
+* Zustand
+* SCSS
+* Vercel
+
+## Implementation Details
+
+* Zustand store manages game state, selected cards, matched pairs, timer values and saved results.
+* Card data is generated dynamically based on the selected difficulty level.
+* The matching flow prevents extra card selection while a pair is being checked.
+* Completed results are persisted in `localStorage` and displayed in the history modal.
+* The interface is split into reusable components for the menu, board, cards, settings and modals.
+
+## Run Locally
+
+```bash
+git clone https://github.com/Stellce/memory_game.git
+cd memory_game
+npm install
+npm run dev
+```
+
+Then open:
+
+```text
+http://localhost:5173
+```
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```
